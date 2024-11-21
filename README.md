@@ -10,8 +10,9 @@ On the UCAR HPC system, they can be found at:
 ## Methodology
 Processing is broken into different components routines.
 
-| Name | description | notebook |
+| Name | description | code |
 |---------:|:------------|:----:|
+| **Biomass Burning** | | |
 | x | y  |  z |
 
 
