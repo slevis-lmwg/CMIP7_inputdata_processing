@@ -8,13 +8,19 @@ On the UCAR HPC system, they can be found at:
 /glade/campaign/<TBD \location>
 
 ## Methodology
-Processing is broken into different components routines.
+Processing is broken into different components/sources.
 
-| Name | description | code |
-|---------:|:------------|:----:|
-| **Biomass Burning** | | |
-| x | y  |  z |
+### Anthropogenic (including aircrafts emissions)
 
+### Biomass Burning
+
+### Volcanic Forcing
+
+### Soil and Ocean
+
+### Biogenic
+
+### Solar Forcing
 
 ## Previous Analysis:
 CMIP6 processing tools can be found here: https://github.com/lkemmons/cesm-cmip6-emissions
