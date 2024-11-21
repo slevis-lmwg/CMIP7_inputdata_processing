@@ -7,5 +7,13 @@ Forcing datasets can be found at: https://wcrp-cmip.org/cmip7-task-teams/forcing
 On the UCAR HPC system, they can be found at:
 /glade/campaign/<TBD \location>
 
+## Methodology
+Processing is broken into different components routines.
+
+| Name | description | notebook |
+|---------:|:------------|:----:|
+| x | y  |  z |
+
+
 ## Previous Analysis:
 CMIP6 processing tools can be found here: https://github.com/lkemmons/cesm-cmip6-emissions
