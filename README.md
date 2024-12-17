@@ -11,7 +11,7 @@ On the UCAR HPC system, they can be found on campaign:
 ## Methodology
 Processing is broken into different components/sources.
 
-### Anthropogenic (including aircrafts emissions)
+### Anthropogenic (including aircraft emissions)
 
 ### Biomass Burning
 
