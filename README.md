@@ -2,7 +2,9 @@
 Code and routines to process CMIP7 forcing datasets for use in CESM3 (Community Earth System Model). Code is developed primarily in Python.
 
 ## Input forcing datasets
-Forcing datasets can be found at: https://wcrp-cmip.org/cmip7-task-teams/forcings/ 
+Information about forcing datasets can be found at: 
+Climate Forcings Task Team: https://wcrp-cmip.org/cmip7-task-teams/forcings/ 
+Dataset overview: https://input4mips-cvs.readthedocs.io/en/latest/dataset-overviews/ 
 
 On the UCAR HPC system, they can be found on campaign:
 - raw datasets: `/glade/campaign/cesm/cesmdata/input4MIPs_raw`
@@ -11,17 +13,18 @@ On the UCAR HPC system, they can be found on campaign:
 ## Methodology
 Processing is broken into different components/sources.
 
-### Anthropogenic (including aircraft emissions)
-
-### Biomass Burning
-
-### Volcanic Forcing
-
-### Soil and Ocean
-
-### Biogenic
-
-### Solar Forcing
+- anthropogenic-emissions
+- biomass-burning
+- co2-isotopes
+- greenhouse-gases
+- land-use
+- nitrogen-deposition
+- optical-properties
+- ozone
+- pop-density
+- solar
+- ssts
+- stratospheric-volcanoes
 
 ## Previous Analysis:
 CMIP6 processing tools can be found here: https://github.com/lkemmons/cesm-cmip6-emissions
