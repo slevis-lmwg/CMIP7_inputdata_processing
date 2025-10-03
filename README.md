@@ -1,4 +1,5 @@
-# CMIP7_processing
+# CMIP7_inputdata_processing
+
 Code and routines to process CMIP7 forcing datasets for use in CESM3 (Community Earth System Model). Code is developed primarily in Python.
 
 ## Input forcing datasets
