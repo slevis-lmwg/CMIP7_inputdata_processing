@@ -16,7 +16,7 @@ The script is organized as follows:
         Specify the paths for the input and output files, set the horizontal and vertical resolution for the output, and choose the type of vertical injection profile. Optionally, apply scaling factors and define the time period over which the climatology is calculated.
 
         2.2 Load injection file. 
-        Definition of the input variables and thier units. Here, the emission duration is set from 12:00 to 18:00 UT as it was not provided in the input file.
+        Definition of the input variables and their units. Here, the emission duration is set from 12:00 to 18:00 UT as it was not provided in the input file.
  
         2.3 Plots. 
          Visualization of the input file
