@@ -18,8 +18,15 @@ under a CTSM checkout. Here it is checked out as a submodule in the subdirectory
 following:
 
 `` shell
-cd ctsm5.4_for_mksurfdat/tools/mksurfdata_esmf
+cd ctsm5.4_for_mksurfdat
+./py_end_create --yes
+conda activate ctsm_pylib
+cd tools/mksurfdata_esmf
 # Follow the instructions in the README.md file there
+# Two easy tests to try are to build the executable and use make to create some low resolution datasets:
+./gen_mksurfdata_build
+make 1x1_brazil-present
+make global-present-low-res
 ```
 
 
