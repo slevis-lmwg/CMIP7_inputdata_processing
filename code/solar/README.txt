@@ -10,8 +10,8 @@ Purpose:
 
     Forcing data: PI control, historical data, future forcing data, SSI sensitivity
                   experiments, auxilliary data for regridding SSI, conversion of
-		  geomagnetic to geograpic cordinates, and the updated NOy boundary
-		  condition
+		  		  geomagnetic to geograpic cordinates, and the updated NOy boundary
+		  	      condition
     reference: Funke et al. (2024, doi: 10.5194/gmd-17-1217-2024)
 
 Inputs:
@@ -20,8 +20,7 @@ Inputs:
     multiple_input4MIPs_solar_CMIP_SOLARIS-HEPPA-CMIP-4-6_gn.nc
 
     2. Historial (1850-2023)
-    /glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/SOLARIS-HEPPA/SOLARIS-HEPPA-CMIP-4-6/atmos/day/Multiple/gn/v20250219/
-    multiple_input4MIPs_solar_CMIP_SOLARIS-HEPPA-CMIP-4-6_gn_18500101-20231231.nc
+    /glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/SOLARIS-HEPPA/SOLARIS-HEPPA-CMIP-4-6/atmos/day/Multiple/gn/v20250219/multiple_input4MIPs_solar_CMIP_SOLARIS-HEPPA-CMIP-4-6_gn_18500101-20231231.nc
     
 Outputs:
     1. Pre-industrial Control (PiControl)
@@ -43,9 +42,10 @@ Usage:
     Download, monthly resolution reference solar forcing (https://cloud.iaa.es/index.php/s/n7cacmRBjk5Gb8f)
 
     2. Copy input data to /glade/work/username/data/solar/CMIP7
-    3. tcsh
-       module load ncl
-       ncl < code.ncl
+
+    3. > tcsh
+       > module load ncl
+       > ncl < code.ncl
 
 Notes:
     Additional modifications to the historical output 
@@ -54,4 +54,5 @@ Notes:
     The unit of time has to be corrected from "days since 1985-01-01" to "days since 1985-01-01 00:00:00"
     (see history in global attributes in the file)
 
-    ncatted -a units,time,o,c,days since 1850-01-01 00:00:00 SolarForcingCMIP7-4.6_18491231-20250206_sumEPP_c20250206_old.nc SolarForcingCMIP7-4.6_18491231-20240101_sumEPP_c20250206.nc
+    ncatted -a units,time,o,c,days since 1850-01-01 00:00:00 SolarForcingCMIP7-4.6_18491231-20250206_sumEPP_c20250206_old.nc
+    SolarForcingCMIP7-4.6_18491231-20240101_sumEPP_c20250206.nc
