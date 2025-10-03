@@ -19,14 +19,14 @@ following:
 
 `` shell
 cd ctsm5.4_for_mksurfdat
-./py_end_create --yes
+./py_end_create --yes      # It's required to have the ctsm_pylib conda environment setup to use the tools
 conda activate ctsm_pylib
 cd tools/mksurfdata_esmf
 # Follow the instructions in the README.md file there
 # Two easy tests to try are to build the executable and use make to create some low resolution datasets:
-./gen_mksurfdata_build
-make 1x1_brazil-present
-make global-present-low-res
+./gen_mksurfdata_build       # This builds mksurfdata_esmf and takes several minutes to complete
+make 1x1_brazil-present      # This runs a simple creation interactively and will take a minute to finish
+make global-present-low-res  # This submits jobs to Derecho and will return quickly, but the jobs will take less than an hour to complete
 ```
 
 
