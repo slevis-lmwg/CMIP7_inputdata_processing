@@ -25,8 +25,16 @@
 # #              It is intended for use of github workflows to test commits to protected
 # #              repository branches.
 # #
+#
+[submodule "landuse_datatools"]
+	path = code/land-use/LandUseDataPrepTools
+	url = https://github.com/ESCOMP/CTSM-LUH-LandUseDataPrepTools
+fxtag = landusedataprep_tag_01
+fxrequired = ToplevelRequired
+# Standard Fork to compare to with "git fleximod test" to ensure personal forks aren't committed
+#fxDONOTUSEurl = https://github.com/ESCOMP/CTSM-LUH-LandUseDataPrepTools
 
-[submodule "ctsm"]
+[submodule "ctsm_mksurfdat"]
 	path = code/land-use/ctsm5.4_for_mksurfdat
 	url = https://github.com/ESCOMP/CTSM
 fxtag = alpha-ctsm5.4.CMIP7.11.ctsm5.3.075
