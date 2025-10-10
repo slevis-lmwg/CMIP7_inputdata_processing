@@ -34,15 +34,6 @@ fxrequired = ToplevelRequired
 # Standard Fork to compare to with "git fleximod test" to ensure personal forks aren't committed
 #fxDONOTUSEurl = https://github.com/ESCOMP/CTSM-LUH-LandUseDataPrepTools
 
-[submodule "ctsm_mksurfdat"]
-	path = code/land-use/ctsm5.4_for_mksurfdat
-	url = https://github.com/ESCOMP/CTSM
-fxtag = alpha-ctsm5.4.CMIP7.11.ctsm5.3.075
-fxrequired = ToplevelRequired
-# Standard Fork to compare to with "git fleximod test" to ensure personal forks aren't committed
-#fxDONOTUSEurl = https://github.com/ESCOMP/CTSM
-
-
 [submodule "ccs_config"]
 path = code/land-use/ctsm5.4_for_mksurfdat/ccs_config
 url = https://github.com/ESMCI/ccs_config_cesm.git
