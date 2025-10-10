@@ -56,7 +56,7 @@ Each entry in **.gitmodules** has the following form (we use CIME as an
 example below)::
 
   [submodule "cime"]
-  path = code/land-use/ctsm5.4_for_mksurfdat/cime
+  path = code/land-use/ctsm_for_mksurfdat/cime
   url = https://github.com/ESMCI/cime
   fxtag = cime6.1.246
   fxrequired = ToplevelRequired

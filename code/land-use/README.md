@@ -14,11 +14,11 @@ cd LandUseDataPrepTools
 ```
 
 The second part is to use those datasets to create the surface and landuse.timeseries files using `mksurfdata_esmf` which is a tool
-under a CTSM checkout. Here it is checked out as a submodule in the subdirectory `ctsm5.4_for_mksurfdat`. To use it do the
+under a CTSM checkout. Here it is checked out as a submodule in the subdirectory `ctsm_for_mksurfdat`. To use it do the
 following:
 
 `` shell
-cd ctsm5.4_for_mksurfdat
+cd ctsm_for_mksurfdat
 ./py_end_create --yes      # It's required to have the ctsm_pylib conda environment setup to use the tools
 conda activate ctsm_pylib
 cd tools/mksurfdata_esmf
