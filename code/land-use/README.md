@@ -18,8 +18,8 @@ under a CTSM checkout. Here it is checked out as a submodule in the subdirectory
 following:
 
 `` shell
-cd ctsm_for_mksurfdat
-./py_end_create --yes      # It's required to have the ctsm_pylib conda environment setup to use the tools
+cd ctsm_for_mksurfdata
+./py_env_create --yes      # It's required to have the ctsm_pylib conda environment setup to use the tools
 conda activate ctsm_pylib
 cd tools/mksurfdata_esmf
 # Follow the instructions in the README.md file there
