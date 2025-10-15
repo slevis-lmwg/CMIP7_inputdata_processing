@@ -1,15 +1,18 @@
 ; Script written by Fang Li and emailed to slevis on 2025/07/24
 ; Script for generating the hdm (aka popdens or population density) stream file
-; /glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c250717.nc
+; /glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c25MMDD.nc
 ; starting from preexisting file
 ; /glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2018_SSP3_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2100_c181205.nc
 ; and raw data in /glade/work/fangli/hd/TRENDY/pop-dens_input4MIPs_population_CMIP_PIK-CMIP-1-0-0_gr_1850-2025.nc
-; Is the latter the same as /glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/PIK/PIK-CMIP-1-0-0 ?
+; UPDATES
+; slevis 2025/10/15:
+; Updated to the latest raw data and generated a new file but
+; We decided to change this script to output data for 1850-2025 only, since we not have CMIP7 data for future projections
 
 f=addfile("/glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2018_SSP3_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2100_c181205.nc","r")
 hdm=f->hdm
 
-f1=addfile("/glade/work/fangli/hd/TRENDY/pop-dens_input4MIPs_population_CMIP_PIK-CMIP-1-0-0_gr_1850-2025.nc","r")
+f1=addfile("/glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/PIK/PIK-CMIP-1-0-1/land/yr/pop_dens/gr/v20250928/pop-dens_input4MIPs_population_CMIP_PIK-CMIP-1-0-1_gr_1850-2025.nc","r")
 hdmn=f1->pop_dens
 
 f2=addfile("/glade/work/fangli/hd/TRENDY/ctl05.clm2.h0.1850-01.nc","r")
@@ -30,7 +33,7 @@ do ilat=0,359
   end do
 end do
 
-fout=addfile("clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c250717.nc","c")
+fout=addfile("clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c251013.nc","c")
  vNam=getfilevarnames(f)
     do i=0,dimsizes(vNam)-1
     if(vNam(dimsizes(vNam)-1-i).ne."hdm")then
