@@ -9,7 +9,7 @@
 ; Updated to the latest raw data and generated a new file but
 ; We decided to change this script to output data for 1850-2025 only, since we not have CMIP7 data for future projections
 
-f=addfile("/glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2016_c180202.nc","r")
+f=addfile("/glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2018_SSP3_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2100_c181205.nc","r")
 hdm=f->hdm
 
 f1=addfile("/glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/PIK/PIK-CMIP-1-0-1/land/yr/pop_dens/gr/v20250928/pop-dens_input4MIPs_population_CMIP_PIK-CMIP-1-0-1_gr_1850-2025.nc","r")
@@ -26,14 +26,14 @@ landf(:,360:719)=landf1(:,0:359)
 do ilat=0,359
  do ilon=0,719
   if(ismissing(landf(ilat,ilon)))then
-     hdm(0:166,ilat,ilon)=(/hdmn(0:166,ilat,ilon)/)
+      hdm(0:175,ilat,ilon)=(/hdmn(:,ilat,ilon)/)
   else
-     hdm(0:166,ilat,ilon)=(/hdmn(0:166,ilat,ilon)/landf(ilat,ilon)/)
+     hdm(0:175,ilat,ilon)=(/hdmn(:,ilat,ilon)/landf(ilat,ilon)/)
   end if 
   end do
 end do
 
-fout=addfile("clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2016_c251015.nc","c")
+fout=addfile("clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c251013.nc","c")
  vNam=getfilevarnames(f)
     do i=0,dimsizes(vNam)-1
     if(vNam(dimsizes(vNam)-1-i).ne."hdm")then
