@@ -1,13 +1,12 @@
 ; Script written by Fang Li and emailed to slevis on 2025/07/24
 ; Script for generating the hdm (aka popdens or population density) stream file
-; /glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c25MMDD.nc
+; /glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2025_CMIP7_hdm_0.5x0.5_simyr1850-2100_c251013.nc
 ; starting from preexisting file
 ; /glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2018_SSP3_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2100_c181205.nc
 ; and raw data in /glade/work/fangli/hd/TRENDY/pop-dens_input4MIPs_population_CMIP_PIK-CMIP-1-0-0_gr_1850-2025.nc
 ; UPDATES
 ; slevis 2025/10/15:
-; Updated to the latest raw data and generated a new file but
-; We decided to change this script to output data for 1850-2025 only, since we not have CMIP7 data for future projections
+; Updated to the latest raw data and generated a new file.
 
 f=addfile("/glade/campaign/cesm/cesmdata/cseg/inputdata/lnd/clm2/firedata/clmforc.Li_2018_SSP3_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2100_c181205.nc","r")
 hdm=f->hdm
