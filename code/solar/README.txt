@@ -1,6 +1,6 @@
 Author: Mijeong Park (original codes from Mike Mills)
 
-Date: October, 3, 2025
+Date: November, 8, 2025
 
 Purpose:
     This file contains information about processing the CMIP7 solar forcing data.
@@ -12,7 +12,9 @@ Purpose:
                   experiments, auxilliary data for regridding SSI, conversion of
 		  		  geomagnetic to geograpic cordinates, and the updated NOy boundary
 		  	      condition
-    reference: Funke et al. (2024, doi: 10.5194/gmd-17-1217-2024)
+    Reference: Funke et al. (2024, doi: 10.5194/gmd-17-1217-2024)
+
+    Metadata file: https://www.solarisheppa.kit.edu/img/CMIP7_metadata_description_4.6.pdf 
 
 Inputs:
     1. Pre-industrial Control (PiControl)
@@ -21,6 +23,9 @@ Inputs:
 
     2. Historial (1850-2023)
     /glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/SOLARIS-HEPPA/SOLARIS-HEPPA-CMIP-4-6/atmos/day/Multiple/gn/v20250219/multiple_input4MIPs_solar_CMIP_SOLARIS-HEPPA-CMIP-4-6_gn_18500101-20231231.nc
+
+    3. Future Solar Forcing Dataset (2022-2299)
+   /glade/campaign/cesm/cesmdata/input4MIPs_raw/input4MIPs/CMIP7/CMIP/SOLARIS-HEPPA/SOLARIS-HEPPA-CMIP-4-6/atmos/day/Multiple/gn/v20251106/multiple_input4MIPs_solar_ScenarioMIP_SOLARIS-HEPPA-ScenarioMIP-4-6-a002_gn_20220101-22991231.nc
     
 Outputs:
     1. Pre-industrial Control (PiControl)
@@ -32,6 +37,11 @@ Outputs:
     script: createSolarDataFileCMIP7-4.6_18500101-20231231.ncl
     input: multiple_input4MIPs_solar_CMIP_SOLARIS-HEPPA-CMIP-4-6_gn_18500101-20231231.nc
     output: SolarForcingCMIP7-4.6_18491231-20240101_sumEPP_c20250206.nc
+
+    3. Future Solar Forcing (2022-2299)
+    script: createSolarDataFileCMIP7-4.6_20220101-22991231.ncl
+    input: multiple_input4MIPs_solar_ScenarioMIP_SOLARIS-HEPPA-ScenarioMIP-4-6-a002_gn_20220101-22991231.nc
+    output: SolarForcingCMIP7-4.6_20211231-23000101_sumEPP_c20251106.nc
 
 Usage:
     Please follow the steps below.
